@@ -1,3 +1,4 @@
+import 'package:chicken/app/data/AppColors.dart';
 import 'package:flutter/material.dart';
 
 class TableRowWidget extends StatelessWidget {
@@ -16,14 +17,17 @@ class TableRowWidget extends StatelessWidget {
             flex: 3,
             child: Text(
               label,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: greyText.withOpacity(0.58)),
             ),
           ),
           Expanded(
             flex: 5,
             child: Text(
               value,
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16, color: greyText.withOpacity(0.58)),
             ),
           ),
         ],

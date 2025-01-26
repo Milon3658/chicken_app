@@ -57,11 +57,11 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
               ),
               Gap(10),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: Container(
                   decoration: BoxDecoration(
                     color: white,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
