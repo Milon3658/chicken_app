@@ -14,6 +14,7 @@ abstract class Routes {
   static const MY_TOTAL_ADDS_EDIT_ADDS = _Paths.MY_TOTAL_ADDS;
   static const EDIT_ADDS = _Paths.EDIT_ADDS;
   static const DELETE_ADDS = _Paths.DELETE_ADDS;
+  static const CHICKEN_MONITOR = _Paths.CHICKEN_MONITOR;
 }
 
 abstract class _Paths {
@@ -29,4 +30,5 @@ abstract class _Paths {
   static const MY_TOTAL_ADDS_EDIT_ADDS = '/edit-adds';
   static const EDIT_ADDS = '/edit-adds';
   static const DELETE_ADDS = '/delete-adds';
+  static const CHICKEN_MONITOR = '/chicken-monitor';
 }

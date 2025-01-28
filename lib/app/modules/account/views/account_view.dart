@@ -60,8 +60,13 @@ class AccountView extends GetView<AccountController> {
                 child: Profiletile(
                     title: 'আমার সকল বিজ্ঞাপন', image: 'assets/images/pc.png'),
               ),
-              Profiletile(
-                  title: 'মুরগি মনিটরিং', image: 'assets/images/pc.png'),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.CHICKEN_MONITOR);
+                },
+                child: Profiletile(
+                    title: 'মুরগি মনিটরিং', image: 'assets/images/pc.png'),
+              ),
               Profiletile(
                   title: 'আমার মেম্বারশিপ', image: 'assets/images/member.png'),
               Profiletile(title: 'চ্যাট করুন', image: 'assets/images/chat.png'),
