@@ -109,30 +109,35 @@ class Addcards extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  height: 40,
-                  width: 180,
-                  decoration: BoxDecoration(
-                    color: Color(0xffF4F4F4),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Gap(5),
-                      Icon(
-                        Icons.delete,
-                        color: greyText.withOpacity(0.58),
-                      ),
-                      Gap(5),
-                      Text(
-                        'ডিলেট',
-                        style: TextStyle(
+                InkWell(
+                  onTap: () {
+                    Get.toNamed(Routes.DELETE_ADDS);
+                  },
+                  child: Container(
+                    height: 40,
+                    width: 180,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF4F4F4),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Gap(5),
+                        Icon(
+                          Icons.delete,
                           color: greyText.withOpacity(0.58),
-                          fontSize: 16,
                         ),
-                      ),
-                    ],
+                        Gap(5),
+                        Text(
+                          'ডিলেট',
+                          style: TextStyle(
+                            color: greyText.withOpacity(0.58),
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ],
