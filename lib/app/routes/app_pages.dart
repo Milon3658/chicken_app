@@ -16,6 +16,8 @@ import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/account_view.dart';
 import '../modules/chicken_monitor/bindings/chicken_monitor_binding.dart';
 import '../modules/chicken_monitor/views/chicken_monitor_view.dart';
+import '../modules/create_input/bindings/create_input_binding.dart';
+import '../modules/create_input/views/create_input_view.dart';
 import '../modules/delete_adds/bindings/delete_adds_binding.dart';
 import '../modules/delete_adds/views/delete_adds_view.dart';
 import '../modules/mainpage/bindings/mainpage_binding.dart';
@@ -85,6 +87,11 @@ class AppPages {
       name: _Paths.CHICKEN_MONITOR,
       page: () => const ChickenMonitorView(),
       binding: ChickenMonitorBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREATE_INPUT,
+      page: () => const CreateInputView(),
+      binding: CreateInputBinding(),
     ),
   ];
 }

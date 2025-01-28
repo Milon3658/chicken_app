@@ -1,5 +1,6 @@
 import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/chicken_monitor/widgets/MonitoringCard.dart';
+import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -24,19 +25,24 @@ class ChickenMonitorView extends GetView<ChickenMonitorController> {
             ),
           ),
           actions: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'ক্রিয়েট ইনপুট আপডেট',
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: greyText.withOpacity(0.7)),
+            InkWell(
+              onTap: () {
+                Get.toNamed(Routes.CREATE_INPUT);
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.white,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'ক্রিয়েট ইনপুট আপডেট',
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: greyText.withOpacity(0.7)),
+                  ),
                 ),
               ),
             ),

@@ -15,6 +15,7 @@ abstract class Routes {
   static const EDIT_ADDS = _Paths.EDIT_ADDS;
   static const DELETE_ADDS = _Paths.DELETE_ADDS;
   static const CHICKEN_MONITOR = _Paths.CHICKEN_MONITOR;
+  static const CREATE_INPUT = _Paths.CREATE_INPUT;
 }
 
 abstract class _Paths {
@@ -31,4 +32,5 @@ abstract class _Paths {
   static const EDIT_ADDS = '/edit-adds';
   static const DELETE_ADDS = '/delete-adds';
   static const CHICKEN_MONITOR = '/chicken-monitor';
+  static const CREATE_INPUT = '/create-input';
 }
