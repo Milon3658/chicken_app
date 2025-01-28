@@ -1,3 +1,4 @@
+import 'package:chicken/app/modules/mainpage/bindings/mainpage_binding.dart';
 import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: MainpageBinding(),
       debugShowCheckedModeBanner: false,
       title: 'Chicknes',
       theme: ThemeData(

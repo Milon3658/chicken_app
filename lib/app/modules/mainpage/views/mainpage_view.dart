@@ -31,6 +31,7 @@ class _MainpageViewState extends State<MainpageView> {
     return Scaffold(
       backgroundColor: Color(0xffEEEEEE),
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: (index) {
           setState(() {

@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 
 class AccountController extends GetxController {
-  //TODO: Implement AccountController
-
   final count = 0.obs;
+  RxInt tabTextIconIndexSelected = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
