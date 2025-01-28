@@ -3,8 +3,10 @@ import 'package:chicken/app/modules/Buy/views/buy_view.dart';
 import 'package:chicken/app/modules/Homepage/views/homepage_view.dart';
 import 'package:chicken/app/modules/account/views/account_view.dart';
 import 'package:chicken/app/modules/sellPage/views/sell_page_view.dart';
+import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 class MainpageView extends StatefulWidget {
   const MainpageView({super.key});
@@ -102,40 +104,45 @@ class _MainpageViewState extends State<MainpageView> {
           ),
         ],
       ),
-      floatingActionButton: SizedBox(
-        height: 100,
-        child: Column(
-          children: [
-            CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 36,
-              child: CircleAvatar(
-                radius: 35,
-                backgroundColor: secondaryColor,
+      floatingActionButton: InkWell(
+        onTap: () {
+          Get.toNamed(Routes.ADDS);
+        },
+        child: SizedBox(
+          height: 100,
+          child: Column(
+            children: [
+              CircleAvatar(
+                backgroundColor: Colors.white,
+                radius: 36,
                 child: CircleAvatar(
-                  radius: 16,
-                  backgroundColor: Colors.white,
+                  radius: 35,
+                  backgroundColor: secondaryColor,
                   child: CircleAvatar(
-                    radius: 15,
-                    backgroundColor: Colors.black,
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
-                      size: 22,
+                    radius: 16,
+                    backgroundColor: Colors.white,
+                    child: CircleAvatar(
+                      radius: 15,
+                      backgroundColor: Colors.black,
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: 22,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Gap(5),
-            Text(
-              'বিজ্ঞাপন',
-              style: TextStyle(
-                color: greyText.withOpacity(0.58),
-                fontSize: 14,
+              Gap(5),
+              Text(
+                'বিজ্ঞাপন',
+                style: TextStyle(
+                  color: greyText.withOpacity(0.58),
+                  fontSize: 14,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

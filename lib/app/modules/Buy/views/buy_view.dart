@@ -1,8 +1,6 @@
-import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/Homepage/widgets/HomeAppBar.dart';
 import 'package:chicken/app/modules/Homepage/widgets/Options.dart';
 import 'package:chicken/app/modules/Homepage/widgets/ProductCard.dart';
-import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
