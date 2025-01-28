@@ -82,14 +82,14 @@ class Userinfocard extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'Expiration: 07.09.2025  To  07.10.2025',
+                  'Expiration: 07.09.2025 To 07.10.2025',
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Gap(20),
+                Gap(10),
                 Text(
                   '24 Day',
                   style: TextStyle(
