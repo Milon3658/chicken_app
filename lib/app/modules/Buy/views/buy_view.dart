@@ -1,3 +1,4 @@
+import 'package:chicken/app/data/AppColors.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -10,7 +11,8 @@ class BuyView extends GetView<BuyController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BuyView'),
+        backgroundColor: primaryColor,
+        title: const Text('বিজ্ঞাপন দিন'),
         centerTitle: true,
       ),
       body: const Center(
