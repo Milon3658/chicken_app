@@ -4,8 +4,12 @@ import '../modules/Adds/bindings/adds_binding.dart';
 import '../modules/Adds/views/adds_view.dart';
 import '../modules/Buy/bindings/buy_binding.dart';
 import '../modules/Buy/views/buy_view.dart';
+import '../modules/EditAdds/bindings/edit_adds_binding.dart';
+import '../modules/EditAdds/views/edit_adds_view.dart';
 import '../modules/Homepage/bindings/homepage_binding.dart';
 import '../modules/Homepage/views/homepage_view.dart';
+import '../modules/MyTotalAdds/bindings/my_total_adds_binding.dart';
+import '../modules/MyTotalAdds/views/my_total_adds_view.dart';
 import '../modules/Product_Details/bindings/product_details_binding.dart';
 import '../modules/Product_Details/views/product_details_view.dart';
 import '../modules/account/bindings/account_binding.dart';
@@ -57,6 +61,16 @@ class AppPages {
       name: _Paths.ACCOUNT,
       page: () => const AccountView(),
       binding: AccountBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_TOTAL_ADDS,
+      page: () => const MyTotalAddsView(),
+      binding: MyTotalAddsBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_ADDS,
+      page: () => const EditAddsView(),
+      binding: EditAddsBinding(),
     ),
   ];
 }

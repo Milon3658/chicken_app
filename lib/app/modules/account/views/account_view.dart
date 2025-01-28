@@ -1,6 +1,7 @@
 import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/account/widgets/ProfileTile.dart';
 import 'package:chicken/app/modules/account/widgets/UserInfoCard.dart';
+import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
 import 'package:gap/gap.dart';
@@ -52,8 +53,13 @@ class AccountView extends GetView<AccountController> {
               Gap(10),
               Userinfocard(),
               Gap(10),
-              Profiletile(
-                  title: 'আমার সকল বিজ্ঞাপন', image: 'assets/images/pc.png'),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.MY_TOTAL_ADDS);
+                },
+                child: Profiletile(
+                    title: 'আমার সকল বিজ্ঞাপন', image: 'assets/images/pc.png'),
+              ),
               Profiletile(
                   title: 'মুরগি মনিটরিং', image: 'assets/images/pc.png'),
               Profiletile(

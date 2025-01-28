@@ -4,9 +4,10 @@ import 'package:gap/gap.dart';
 
 class Uploadformfield extends StatelessWidget {
   String title;
+  String? hint;
   bool? isIcon;
 
-  Uploadformfield({required this.title, this.isIcon});
+  Uploadformfield({required this.title, this.isIcon, this.hint});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,8 @@ class Uploadformfield extends StatelessWidget {
         Gap(5),
         TextFormField(
           decoration: InputDecoration(
+            hintStyle: TextStyle(color: greyText.withOpacity(0.58)),
+            hintText: hint,
             suffixIcon: isIcon == true ? Icon(Icons.keyboard_arrow_down) : null,
             fillColor: Colors.white,
             filled: true,

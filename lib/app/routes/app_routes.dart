@@ -10,6 +10,9 @@ abstract class Routes {
   static const ADDS = _Paths.ADDS;
   static const BUY = _Paths.BUY;
   static const ACCOUNT = _Paths.ACCOUNT;
+  static const MY_TOTAL_ADDS = _Paths.MY_TOTAL_ADDS;
+  static const MY_TOTAL_ADDS_EDIT_ADDS = _Paths.MY_TOTAL_ADDS;
+  static const EDIT_ADDS = _Paths.EDIT_ADDS;
 }
 
 abstract class _Paths {
@@ -21,4 +24,7 @@ abstract class _Paths {
   static const ADDS = '/adds';
   static const BUY = '/buy';
   static const ACCOUNT = '/account';
+  static const MY_TOTAL_ADDS = '/my-total-adds';
+  static const MY_TOTAL_ADDS_EDIT_ADDS = '/edit-adds';
+  static const EDIT_ADDS = '/edit-adds';
 }

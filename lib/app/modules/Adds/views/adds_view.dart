@@ -1,5 +1,5 @@
 import 'package:chicken/app/data/AppColors.dart';
-import 'package:chicken/app/modules/sellPage/widgets/UploadFormField.dart';
+import 'package:chicken/app/modules/Adds/widgets/UploadFormField.dart';
 import 'package:chicken/app/modules/sellPage/widgets/UploadSellPhoto.dart';
 import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
