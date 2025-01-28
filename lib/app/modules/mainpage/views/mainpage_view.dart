@@ -1,5 +1,8 @@
 import 'package:chicken/app/data/AppColors.dart';
+import 'package:chicken/app/modules/Buy/views/buy_view.dart';
 import 'package:chicken/app/modules/Homepage/views/homepage_view.dart';
+import 'package:chicken/app/modules/account/views/account_view.dart';
+import 'package:chicken/app/modules/sellPage/views/sell_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -29,7 +32,9 @@ class _MainpageViewState extends State<MainpageView> {
         controller: _pageController,
         onPageChanged: (index) {
           setState(() {
-            if (index == 2 || index == 3) {
+            if (index == 2) {
+              _currentIndex = 1;
+            } else if (index == 3) {
               _currentIndex = 4;
             } else {
               _currentIndex = index;
@@ -38,9 +43,9 @@ class _MainpageViewState extends State<MainpageView> {
         },
         children: [
           HomepageView(),
-          HomepageView(),
-          Center(child: Text('Page 3', style: TextStyle(fontSize: 24))),
-          Center(child: Text('Page 4', style: TextStyle(fontSize: 24))),
+          SellPageView(),
+          BuyView(),
+          AccountView(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -6,6 +6,10 @@ abstract class Routes {
   static const HOMEPAGE = _Paths.HOMEPAGE;
   static const PRODUCT_DETAILS = _Paths.PRODUCT_DETAILS;
   static const MAINPAGE = _Paths.MAINPAGE;
+  static const SELL_PAGE = _Paths.SELL_PAGE;
+  static const ADDS = _Paths.ADDS;
+  static const BUY = _Paths.BUY;
+  static const ACCOUNT = _Paths.ACCOUNT;
 }
 
 abstract class _Paths {
@@ -13,4 +17,8 @@ abstract class _Paths {
   static const HOMEPAGE = '/homepage';
   static const PRODUCT_DETAILS = '/product-details';
   static const MAINPAGE = '/mainpage';
+  static const SELL_PAGE = '/sell-page';
+  static const ADDS = '/adds';
+  static const BUY = '/buy';
+  static const ACCOUNT = '/account';
 }
