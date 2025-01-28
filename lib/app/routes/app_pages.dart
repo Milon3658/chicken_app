@@ -4,6 +4,8 @@ import '../modules/Homepage/bindings/homepage_binding.dart';
 import '../modules/Homepage/views/homepage_view.dart';
 import '../modules/Product_Details/bindings/product_details_binding.dart';
 import '../modules/Product_Details/views/product_details_view.dart';
+import '../modules/mainpage/bindings/mainpage_binding.dart';
+import '../modules/mainpage/views/mainpage_view.dart';
 
 part 'app_routes.dart';
 
@@ -22,6 +24,11 @@ class AppPages {
       name: _Paths.PRODUCT_DETAILS,
       page: () => const ProductDetailsView(),
       binding: ProductDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.MAINPAGE,
+      page: () => const MainpageView(),
+      binding: MainpageBinding(),
     ),
   ];
 }
