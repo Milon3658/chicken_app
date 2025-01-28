@@ -51,7 +51,7 @@ class Homeappbar extends StatelessWidget {
                       text: TextSpan(
                           text: 'লোকেশন: ',
                           style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 12,
                             color: white,
                             fontWeight: FontWeight.w500,
                           ),
@@ -59,7 +59,7 @@ class Homeappbar extends StatelessWidget {
                             TextSpan(
                               text: 'ফরিদপুর:',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 12,
                                 color: secondaryColor,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -73,8 +73,8 @@ class Homeappbar extends StatelessWidget {
               ],
             ),
             Container(
-              height: 40,
-              width: 160,
+              height: 35,
+              width: 140,
               decoration: BoxDecoration(
                 color: white,
                 borderRadius: BorderRadius.circular(20),
@@ -91,7 +91,7 @@ class Homeappbar extends StatelessWidget {
                     Gap(5),
                     Text('আজকের বাজার',
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 12,
                           color: mainText,
                           fontWeight: FontWeight.w500,
                         )),
@@ -103,15 +103,15 @@ class Homeappbar extends StatelessWidget {
               children: [
                 Image(
                   image: AssetImage('assets/images/hand.png'),
-                  height: 40,
-                  width: 40,
+                  height: 30,
+                  width: 30,
                   fit: BoxFit.cover,
                 ),
                 Gap(8),
                 Image(
                   image: AssetImage('assets/images/notification.png'),
-                  height: 30,
-                  width: 30,
+                  height: 25,
+                  width: 25,
                   fit: BoxFit.cover,
                 ),
               ],

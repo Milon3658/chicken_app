@@ -14,8 +14,8 @@ class ProductCard extends StatelessWidget {
         Get.toNamed(Routes.PRODUCT_DETAILS);
       },
       child: Container(
-        height: 280,
-        width: 195,
+        height: 300,
+        width: 180,
         decoration: BoxDecoration(
           color: white,
           borderRadius: BorderRadius.circular(20),
@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
               child: Text(
                 'দাম:১৬০ টাকা',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 18,
                   color: secondaryColor,
                   fontWeight: FontWeight.bold,
                 ),
@@ -41,7 +41,7 @@ class ProductCard extends StatelessWidget {
               child: Text(
                 'ব্রয়লার:২৫০ পিস',
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 16,
                   color: greyText.withOpacity(0.58),
                 ),
               ),
@@ -51,7 +51,7 @@ class ProductCard extends StatelessWidget {
               child: Text(
                 'গড় ওজন: ২.৫ কেজি',
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 16,
                   color: greyText.withOpacity(0.58),
                 ),
               ),
@@ -64,7 +64,7 @@ class ProductCard extends StatelessWidget {
                   Text(
                     'ভেরিফায়েড',
                     style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 16,
                         color: primaryColor,
                         fontWeight: FontWeight.bold),
                   ),

@@ -27,7 +27,7 @@ class _BuilddropdownState extends State<Builddropdown> {
         SizedBox(width: 4),
         DropdownButton<String>(
           value: widget.value,
-          style: TextStyle(fontSize: 16, color: greyText),
+          style: TextStyle(fontSize: 14, color: greyText),
           underline: SizedBox(),
           icon: Icon(Icons.check, color: Colors.green),
           items: widget.items.map((item) {

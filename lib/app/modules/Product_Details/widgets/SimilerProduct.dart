@@ -31,6 +31,7 @@ class Similerproduct extends StatelessWidget {
                 ),
               ),
             ),
+            Gap(5),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +40,7 @@ class Similerproduct extends StatelessWidget {
                   'দাম:১৬০ টাকা',
                   style: TextStyle(
                     color: secondaryColor,
-                    fontSize: 20,
+                    fontSize: 18,
                   ),
                 ),
                 Gap(5),
@@ -47,7 +48,7 @@ class Similerproduct extends StatelessWidget {
                   'ব্রয়লার:২৫০ পিস',
                   style: TextStyle(
                     color: greyText.withOpacity(0.58),
-                    fontSize: 17,
+                    fontSize: 16,
                   ),
                 ),
                 Gap(5),
@@ -56,14 +57,14 @@ class Similerproduct extends StatelessWidget {
                     Text('গড় ওজন: ২.৫ কেজি',
                         style: TextStyle(
                           color: greyText.withOpacity(0.58),
-                          fontSize: 17,
+                          fontSize: 16,
                         )),
                     Gap(10),
                     Text(
                       '২৪ দিন',
                       style: TextStyle(
                         color: greyText.withOpacity(0.58),
-                        fontSize: 17,
+                        fontSize: 16,
                       ),
                     ),
                   ],

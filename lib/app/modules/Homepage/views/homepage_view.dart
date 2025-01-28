@@ -27,25 +27,20 @@ class HomepageView extends GetView<HomepageController> {
             ),
             Gap(10),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ProductCard(),
-                  ProductCard(),
-                ],
-              ),
-            ),
-            Gap(10),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ProductCard(),
-                  ProductCard(),
-                ],
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: GridView.builder(
+                  itemCount: 10,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  primary: false,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: 0.7,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10),
+                  itemBuilder: (BuildContext context, int index) {
+                    return ProductCard();
+                  }),
             ),
           ],
         ),
