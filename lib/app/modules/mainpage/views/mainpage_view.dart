@@ -52,7 +52,7 @@ class _MainpageViewState extends State<MainpageView> {
         backgroundColor: Colors.white,
         selectedFontSize: 12,
         selectedLabelStyle: TextStyle(
-          height: 1.8, // Adjust spacing: default is around 1.0
+          height: 1.8,
         ),
         unselectedLabelStyle: TextStyle(
           height: 1.8, // Consistent gap for unselected items
@@ -60,7 +60,7 @@ class _MainpageViewState extends State<MainpageView> {
         selectedItemColor: greyText.withOpacity(0.58),
         unselectedItemColor: greyText.withOpacity(0.58),
         showSelectedLabels: true,
-        showUnselectedLabels: true,
+        showUnselectedLabels: false,
         currentIndex: _currentIndex,
         onTap: _onItemTapped,
         items: [
