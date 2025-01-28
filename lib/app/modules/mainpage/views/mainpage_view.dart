@@ -138,8 +138,7 @@ class _MainpageViewState extends State<MainpageView> {
           ],
         ),
       ),
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniCenterDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

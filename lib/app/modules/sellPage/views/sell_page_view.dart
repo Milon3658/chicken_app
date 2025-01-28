@@ -1,7 +1,11 @@
+import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/Homepage/widgets/HomeAppBar.dart';
 import 'package:chicken/app/modules/Homepage/widgets/Options.dart';
 import 'package:chicken/app/modules/Homepage/widgets/ProductCard.dart';
 import 'package:chicken/app/modules/sellPage/controllers/sell_page_controller.dart';
+import 'package:chicken/app/modules/sellPage/widgets/UploadFormField.dart';
+import 'package:chicken/app/modules/sellPage/widgets/UploadSellPhoto.dart';
+import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
@@ -11,40 +15,75 @@ class SellPageView extends GetView<SellPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: SafeArea(
-        child: Column(
-          children: [
-            Homeappbar(),
-            Gap(10),
-            Options(),
-            Gap(10),
-            Image.asset(
-              'assets/images/chicken.png',
-              height: 240,
-              width: Get.width,
-              fit: BoxFit.cover,
+        backgroundColor: Color(0xffE9E8E8),
+        appBar: AppBar(
+          leading: InkWell(
+            onTap: () {
+              Get.toNamed(Routes.MAINPAGE);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
             ),
+          ),
+          backgroundColor: primaryColor,
+          title: const Text(
+            'বিজ্ঞাপন দিন',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        body: SingleChildScrollView(
+            child: Column(
+          children: [
+            Uploadsellphoto(),
             Gap(10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: GridView.builder(
-                  itemCount: 10,
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  primary: false,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.7,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10),
-                  itemBuilder: (BuildContext context, int index) {
-                    return ProductCard();
-                  }),
-            ),
+              child: Column(
+                children: [
+                  Uploadformfield(
+                    title: 'বিজ্ঞাপন ক্যাটাগরি',
+                    isIcon: true,
+                  ),
+                  Gap(10),
+                  Uploadformfield(
+                    title: 'পণ্যের ধরন',
+                    isIcon: true,
+                  ),
+                  Gap(10),
+                  Uploadformfield(
+                    title: 'গড় ওজন (কেজি)',
+                  ),
+                  Gap(10),
+                  Uploadformfield(
+                    title: 'মোট সংখ্যা',
+                  ),
+                  Gap(10),
+                  Uploadformfield(
+                    title: 'দাম',
+                  ),
+                  Gap(10),
+                  Uploadformfield(
+                    title: 'বিস্তারিত',
+                  ),
+                  Gap(20),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'বিজ্ঞাপন যুক্ত করুন',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  Gap(100),
+                ],
+              ),
+            )
           ],
-        ),
-      ),
-    ));
+        )));
   }
 }
