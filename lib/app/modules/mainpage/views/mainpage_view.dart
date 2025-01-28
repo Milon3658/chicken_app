@@ -21,7 +21,14 @@ class _MainpageViewState extends State<MainpageView> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _currentIndex = index;
+      // _currentIndex = index;
+      if (index == 2) {
+        _currentIndex == 1;
+      } else if (index == 3) {
+        _currentIndex == 4;
+      } else {
+        _currentIndex = index;
+      }
     });
     _pageController.jumpToPage(index);
   }
@@ -35,6 +42,13 @@ class _MainpageViewState extends State<MainpageView> {
         controller: _pageController,
         onPageChanged: (index) {
           setState(() {
+            if (index == 2) {
+              _currentIndex == 1;
+            } else if (index == 3) {
+              _currentIndex == 4;
+            } else {
+              _currentIndex = index;
+            }
             _currentIndex = index;
           });
         },
