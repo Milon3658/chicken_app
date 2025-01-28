@@ -107,14 +107,14 @@ class _MainpageViewState extends State<MainpageView> {
         ],
       ),
       floatingActionButton: SizedBox(
-        height: 110,
+        height: 100,
         child: Column(
           children: [
             CircleAvatar(
               backgroundColor: Colors.white,
-              radius: 41,
+              radius: 36,
               child: CircleAvatar(
-                radius: 38,
+                radius: 35,
                 backgroundColor: secondaryColor,
                 child: CircleAvatar(
                   radius: 16,
