@@ -24,6 +24,8 @@ import '../modules/mainpage/bindings/mainpage_binding.dart';
 import '../modules/mainpage/views/mainpage_view.dart';
 import '../modules/membership/bindings/membership_binding.dart';
 import '../modules/membership/views/membership_view.dart';
+import '../modules/my_profile/bindings/my_profile_binding.dart';
+import '../modules/my_profile/views/my_profile_view.dart';
 import '../modules/sellPage/bindings/sell_page_binding.dart';
 import '../modules/sellPage/views/sell_page_view.dart';
 
@@ -99,6 +101,11 @@ class AppPages {
       name: _Paths.MEMBERSHIP,
       page: () => const MembershipView(),
       binding: MembershipBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_PROFILE,
+      page: () => const MyProfileView(),
+      binding: MyProfileBinding(),
     ),
   ];
 }

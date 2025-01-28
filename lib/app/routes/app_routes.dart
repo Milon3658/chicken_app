@@ -17,6 +17,7 @@ abstract class Routes {
   static const CHICKEN_MONITOR = _Paths.CHICKEN_MONITOR;
   static const CREATE_INPUT = _Paths.CREATE_INPUT;
   static const MEMBERSHIP = _Paths.MEMBERSHIP;
+  static const MY_PROFILE = _Paths.MY_PROFILE;
 }
 
 abstract class _Paths {
@@ -35,4 +36,5 @@ abstract class _Paths {
   static const CHICKEN_MONITOR = '/chicken-monitor';
   static const CREATE_INPUT = '/create-input';
   static const MEMBERSHIP = '/membership';
+  static const MY_PROFILE = '/my-profile';
 }

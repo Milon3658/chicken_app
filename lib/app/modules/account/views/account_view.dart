@@ -76,9 +76,14 @@ class AccountView extends GetView<AccountController> {
                     image: 'assets/images/member.png'),
               ),
               Profiletile(title: 'চ্যাট করুন', image: 'assets/images/chat.png'),
-              Profiletile(
-                  title: 'আমার প্রোফাইল',
-                  image: 'assets/images/profileImg.png'),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.MY_PROFILE);
+                },
+                child: Profiletile(
+                    title: 'আমার প্রোফাইল',
+                    image: 'assets/images/profileImg.png'),
+              ),
               Gap(10),
               Row(
                 children: [
