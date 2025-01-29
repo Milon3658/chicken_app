@@ -1,3 +1,4 @@
+import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -205,7 +206,9 @@ class MembershipDetailsView extends GetView<MembershipDetailsController> {
                                   height: 50,
                                   width: 250,
                                   child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Get.toNamed(Routes.PAYMENT);
+                                      },
                                       style: ElevatedButton.styleFrom(
                                           backgroundColor: Color(0xffC64709)),
                                       child: Text(

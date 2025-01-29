@@ -19,6 +19,7 @@ abstract class Routes {
   static const MEMBERSHIP = _Paths.MEMBERSHIP;
   static const MY_PROFILE = _Paths.MY_PROFILE;
   static const MEMBERSHIP_DETAILS = _Paths.MEMBERSHIP_DETAILS;
+  static const PAYMENT = _Paths.PAYMENT;
 }
 
 abstract class _Paths {
@@ -39,4 +40,5 @@ abstract class _Paths {
   static const MEMBERSHIP = '/membership';
   static const MY_PROFILE = '/my-profile';
   static const MEMBERSHIP_DETAILS = '/membership-details';
+  static const PAYMENT = '/payment';
 }

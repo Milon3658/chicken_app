@@ -3,9 +3,7 @@ import 'package:chicken/app/modules/membership/widgets/membership_option.dart';
 import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
 import 'package:get/get.dart';
-
 import '../controllers/membership_controller.dart';
 
 class MembershipView extends GetView<MembershipController> {
@@ -14,31 +12,71 @@ class MembershipView extends GetView<MembershipController> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xffE5DFCF),
-        body: Stack(children: [
-          Column(
-            children: [
-              Gap(50),
-              Container(
-                height: 250,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color(0xff1C9876),
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30)),
+        body: Stack(
+          children: [
+            Column(
+              children: [
+                Gap(50),
+                Container(
+                  height: 350,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xff1C9876),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30)),
+                  ),
                 ),
-              ),
-              Positioned.fill(
+                Spacer(),
+                Text(
+                  'আপনার যদি কোন তথ্য জানার থাকে',
+                  style: TextStyle(fontSize: 12, color: primaryColor),
+                ),
+                Gap(5),
+                Text(
+                  'দয়া করে ফোন করুন',
+                  style: TextStyle(fontSize: 12, color: primaryColor),
+                ),
+                Gap(10),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Call',
+                      style: TextStyle(fontSize: 12),
+                    )),
+                Gap(10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: primaryColor),
+                        child: Text(
+                          'চালিয়ে যান',
+                          style: TextStyle(fontSize: 16, color: Colors.white),
+                        )),
+                  ),
+                ),
+                Gap(100),
+              ],
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Positioned.fill(
                   top: 100,
-                  left: 100,
                   child: Container(
-                    height: 200,
+                    height: 300,
                     width: 300,
                     decoration: BoxDecoration(
                       color: Color(0xffFFF7EC),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Gap(20),
                         InkWell(
@@ -55,7 +93,7 @@ class MembershipView extends GetView<MembershipController> {
                             color: Color(0xffE5DFCF),
                           ),
                         ),
-                        Gap(10),
+                        Gap(20),
                         InkWell(
                           onTap: () {
                             Get.toNamed(Routes.MEMBERSHIP_DETAILS, arguments: {
@@ -70,7 +108,7 @@ class MembershipView extends GetView<MembershipController> {
                             color: Color(0xffB0EAEB),
                           ),
                         ),
-                        Gap(10),
+                        Gap(20),
                         InkWell(
                           onTap: () {
                             Get.toNamed(Routes.MEMBERSHIP_DETAILS, arguments: {
@@ -88,42 +126,8 @@ class MembershipView extends GetView<MembershipController> {
                       ],
                     ),
                   )),
-              Spacer(),
-              Text(
-                'আপনার যদি কোন তথ্য জানার থাকে',
-                style: TextStyle(fontSize: 12, color: primaryColor),
-              ),
-              Gap(5),
-              Text(
-                'দয়া করে ফোন করুন',
-                style: TextStyle(fontSize: 12, color: primaryColor),
-              ),
-              Gap(10),
-              ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Call',
-                    style: TextStyle(fontSize: 12),
-                  )),
-              Gap(10),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: primaryColor),
-                      child: Text(
-                        'চালিয়ে যান',
-                        style: TextStyle(fontSize: 16, color: Colors.white),
-                      )),
-                ),
-              ),
-              Gap(100),
-            ],
-          ),
-        ]));
+            ),
+          ],
+        ));
   }
 }
