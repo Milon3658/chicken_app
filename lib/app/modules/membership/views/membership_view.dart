@@ -1,4 +1,6 @@
 import 'package:chicken/app/data/AppColors.dart';
+import 'package:chicken/app/modules/membership/widgets/membership_option.dart';
+import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -17,7 +19,7 @@ class MembershipView extends GetView<MembershipController> {
             children: [
               Gap(50),
               Container(
-                height: 300,
+                height: 250,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Color(0xff1C9876),
@@ -26,6 +28,66 @@ class MembershipView extends GetView<MembershipController> {
                       topRight: Radius.circular(30)),
                 ),
               ),
+              Positioned.fill(
+                  top: 100,
+                  left: 100,
+                  child: Container(
+                    height: 200,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFFF7EC),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        Gap(20),
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed(Routes.MEMBERSHIP_DETAILS, arguments: {
+                              'title': 'বেসিক',
+                              'duration': '১',
+                              'price': '750'
+                            });
+                          },
+                          child: MembershipOption(
+                            title: '(বেসিক) ১ মাস',
+                            description: 'এক মাসের সাবস্ক্রিপশন ফি ৭৫০ টাকা।',
+                            color: Color(0xffE5DFCF),
+                          ),
+                        ),
+                        Gap(10),
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed(Routes.MEMBERSHIP_DETAILS, arguments: {
+                              'title': 'স্ট্যান্ডার্ড',
+                              'duration': '৬',
+                              'price': '৩০০০.০০'
+                            });
+                          },
+                          child: MembershipOption(
+                            title: '(স্ট্যান্ডার্ড) ৬ মাস',
+                            description: 'ছয় মাসের সাবস্ক্রিপশন ফি ৩০০০ টাকা ',
+                            color: Color(0xffB0EAEB),
+                          ),
+                        ),
+                        Gap(10),
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed(Routes.MEMBERSHIP_DETAILS, arguments: {
+                              'title': 'প্রিমিয়াম',
+                              'duration': '১২',
+                              'price': '৫০০০.০০'
+                            });
+                          },
+                          child: MembershipOption(
+                            title: '(প্রিমিয়াম) ১২ মাস',
+                            description: 'বারো মাসের সাবস্ক্রিপশন ফি ৫০০০ টাকা',
+                            color: Color(0xff65DDDC),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
               Spacer(),
               Text(
                 'আপনার যদি কোন তথ্য জানার থাকে',

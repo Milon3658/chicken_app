@@ -18,6 +18,7 @@ abstract class Routes {
   static const CREATE_INPUT = _Paths.CREATE_INPUT;
   static const MEMBERSHIP = _Paths.MEMBERSHIP;
   static const MY_PROFILE = _Paths.MY_PROFILE;
+  static const MEMBERSHIP_DETAILS = _Paths.MEMBERSHIP_DETAILS;
 }
 
 abstract class _Paths {
@@ -37,4 +38,5 @@ abstract class _Paths {
   static const CREATE_INPUT = '/create-input';
   static const MEMBERSHIP = '/membership';
   static const MY_PROFILE = '/my-profile';
+  static const MEMBERSHIP_DETAILS = '/membership-details';
 }
