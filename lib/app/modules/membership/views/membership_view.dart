@@ -26,6 +26,31 @@ class MembershipView extends GetView<MembershipController> {
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30)),
                   ),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text('শুরু করা যাক', style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),),
+                        ),
+                        Gap(10),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text('আপনি কোন সদস্যতা \n কিনতে চাচ্ছেন', textAlign: TextAlign.left, style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Spacer(),
                 Text(
@@ -66,7 +91,10 @@ class MembershipView extends GetView<MembershipController> {
             Align(
               alignment: Alignment.center,
               child: Positioned.fill(
-                  top: 100,
+                left: 0.0,
+                  right: 0.0,
+                  top: 0.0,
+                  bottom: 0.0,
                   child: Container(
                     height: 300,
                     width: 300,
