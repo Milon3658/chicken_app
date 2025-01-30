@@ -1,4 +1,6 @@
 import 'package:chicken/app/data/AppColors.dart';
+import 'package:chicken/app/modules/Homepage/widgets/AjkerBazar.dart';
+import 'package:chicken/app/modules/Homepage/widgets/HoleSellButton.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
@@ -72,30 +74,55 @@ class Homeappbar extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              height: 35,
-              width: 140,
-              decoration: BoxDecoration(
-                color: white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/dollar.png',
-                      height: 20,
-                      width: 20,
-                    ),
-                    Gap(5),
-                    Text('আজকের বাজার',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: mainText,
-                          fontWeight: FontWeight.w500,
-                        )),
-                  ],
+            InkWell(
+              onTap: () {
+                Get.bottomSheet(
+                  isDismissible: true,
+                  backgroundColor: Colors.transparent,
+                  Container(
+                      height: Get.height,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(40),
+                          topRight: Radius.circular(40),
+                        ),
+                        border: Border(
+                          top: BorderSide(
+                            color: secondaryColor,
+                            width: 2,
+                          ),
+                        ),
+                        color: Colors.white,
+                      ),
+                      child: Ajkerbazar()),
+                );
+              },
+              child: Container(
+                height: 35,
+                width: 140,
+                decoration: BoxDecoration(
+                  color: white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/dollar.png',
+                        height: 20,
+                        width: 20,
+                      ),
+                      Gap(5),
+                      Text('আজকের বাজার',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: mainText,
+                            fontWeight: FontWeight.w500,
+                          )),
+                    ],
+                  ),
                 ),
               ),
             ),
