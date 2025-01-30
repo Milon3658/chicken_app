@@ -34,8 +34,8 @@ class OtpView extends GetView<OtpController> {
                   ),
                   child: Image(
                     image: AssetImage('assets/images/computer.png'),
-                    height: 10,
-                    width: 10,
+                    height: 100,
+                    width: 100,
                   ),
                 ),
                 Expanded(
@@ -60,7 +60,7 @@ class OtpView extends GetView<OtpController> {
                                   primaryColor),
                             ),
                             onPressed: () {
-                              Get.toNamed(Routes.OTP);
+                              Get.toNamed(Routes.LOGIN_FORM);
                             },
                             child: Text(
                               'জমা দিন',
