@@ -1,4 +1,6 @@
+import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/Homepage/widgets/HomeAppBar.dart';
+import 'package:chicken/app/modules/Homepage/widgets/LeftNavigation.dart';
 import 'package:chicken/app/modules/Homepage/widgets/Options.dart';
 import 'package:chicken/app/modules/Homepage/widgets/ProductCard.dart';
 import 'package:flutter/material.dart';
@@ -19,18 +21,16 @@ class HomepageView extends GetView<HomepageController> {
                 children: [
                   Homeappbar(),
                   Options(),
-                  Gap(10),
+                  Gap(5),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       controller.isCategoryTapped.value
                           ? Padding(
-                              padding: const EdgeInsets.only(right: 5, top: 5),
-                              child: Container(
-                                width: 80,
-                                height: Get.height,
-                                color: Colors.red,
+                              padding: const EdgeInsets.only(
+                                right: 5,
                               ),
-                            )
+                              child: Leftnavigation())
                           : Container(),
                       Expanded(
                         child: Column(
