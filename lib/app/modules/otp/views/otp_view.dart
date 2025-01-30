@@ -112,6 +112,26 @@ class OtpView extends GetView<OtpController> {
                         }, // end onSubmit
                       ),
                     ),
+                    Gap(20),
+                    Center(
+                      child: Text(
+                        'OTP পাইনি?',
+                        style: TextStyle(
+                          color: greyText.withOpacity(0.58),
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                    Gap(10),
+                    Center(
+                      child: Text(
+                        'OTP পুনরায় পাঠান',
+                        style: TextStyle(
+                          color: greyText.withOpacity(0.58),
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               )),
