@@ -20,6 +20,8 @@ import '../modules/create_input/bindings/create_input_binding.dart';
 import '../modules/create_input/views/create_input_view.dart';
 import '../modules/delete_adds/bindings/delete_adds_binding.dart';
 import '../modules/delete_adds/views/delete_adds_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
 import '../modules/mainpage/bindings/mainpage_binding.dart';
 import '../modules/mainpage/views/mainpage_view.dart';
 import '../modules/membership/bindings/membership_binding.dart';
@@ -28,6 +30,8 @@ import '../modules/membership_details/bindings/membership_details_binding.dart';
 import '../modules/membership_details/views/membership_details_view.dart';
 import '../modules/my_profile/bindings/my_profile_binding.dart';
 import '../modules/my_profile/views/my_profile_view.dart';
+import '../modules/otp/bindings/otp_binding.dart';
+import '../modules/otp/views/otp_view.dart';
 import '../modules/payment/bindings/payment_binding.dart';
 import '../modules/payment/views/payment_view.dart';
 import '../modules/sellPage/bindings/sell_page_binding.dart';
@@ -120,6 +124,16 @@ class AppPages {
       name: _Paths.PAYMENT,
       page: () => const PaymentView(),
       binding: PaymentBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP,
+      page: () => const OtpView(),
+      binding: OtpBinding(),
     ),
   ];
 }
