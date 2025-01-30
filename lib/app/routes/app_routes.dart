@@ -22,6 +22,7 @@ abstract class Routes {
   static const PAYMENT = _Paths.PAYMENT;
   static const LOGIN = _Paths.LOGIN;
   static const OTP = _Paths.OTP;
+  static const LOGIN_FORM = _Paths.LOGIN_FORM;
 }
 
 abstract class _Paths {
@@ -45,4 +46,5 @@ abstract class _Paths {
   static const PAYMENT = '/payment';
   static const LOGIN = '/login';
   static const OTP = '/otp';
+  static const LOGIN_FORM = '/login-form';
 }

@@ -2,6 +2,7 @@ import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/otp/controllers/otp_controller.dart';
 import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
@@ -88,12 +89,27 @@ class OtpView extends GetView<OtpController> {
                     Gap(20),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
+                      child: OtpTextField(
+                        numberOfFields: 4,
+                        borderColor: Color(0xFF512DA8),
+                        //set to true to show as box or false to show as dash
+                        showFieldAsBox: true,
+                        //runs when a code is typed in
+                        onCodeChanged: (String code) {
+                          //handle validation or checks here
+                        },
+                        //runs when every textfield is filled
+                        onSubmit: (String verificationCode) {
+                          showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: Text("Verification Code"),
+                                  content:
+                                      Text('Code entered is $verificationCode'),
+                                );
+                              });
+                        }, // end onSubmit
                       ),
                     ),
                   ],

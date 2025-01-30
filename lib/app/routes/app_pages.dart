@@ -22,6 +22,8 @@ import '../modules/delete_adds/bindings/delete_adds_binding.dart';
 import '../modules/delete_adds/views/delete_adds_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/login_form/bindings/login_form_binding.dart';
+import '../modules/login_form/views/login_form_view.dart';
 import '../modules/mainpage/bindings/mainpage_binding.dart';
 import '../modules/mainpage/views/mainpage_view.dart';
 import '../modules/membership/bindings/membership_binding.dart';
@@ -134,6 +136,11 @@ class AppPages {
       name: _Paths.OTP,
       page: () => const OtpView(),
       binding: OtpBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN_FORM,
+      page: () => const LoginFormView(),
+      binding: LoginFormBinding(),
     ),
   ];
 }
