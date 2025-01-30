@@ -29,7 +29,13 @@ class _AjkerbazarState extends State<Ajkerbazar> {
               Gap(20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [Icon(Icons.close)],
+                children: [
+                  InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Icon(Icons.close))
+                ],
               ),
               Gap(10),
               FlutterToggleTab(
