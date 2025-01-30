@@ -4,6 +4,7 @@ class HomepageController extends GetxController {
   //TODO: Implement HomepageController
 
   final count = 0.obs;
+  RxBool isCategoryTapped = false.obs;
   @override
   void onInit() {
     super.onInit();

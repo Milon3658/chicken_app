@@ -1,5 +1,7 @@
+import 'package:chicken/app/modules/Homepage/controllers/homepage_controller.dart';
 import 'package:chicken/app/modules/Homepage/widgets/BuildDropDown.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Options extends StatefulWidget {
   const Options({super.key});
@@ -11,37 +13,34 @@ class Options extends StatefulWidget {
 class _OptionsState extends State<Options> {
   @override
   Widget build(BuildContext context) {
-    String selectedCategory = 'ক্যাটাগিরি';
-    String selectedPrice = 'মূল্য:হোলসেলার';
-    String selectedEquipment = 'ইকুইপমেন্ট';
-
-    final List<String> categoryItems = ['ক্যাটাগিরি', 'অপশন ১', 'অপশন ২'];
-    final List<String> priceItems = ['মূল্য:হোলসেলার', 'মূল্য ১', 'মূল্য ২'];
-    final List<String> equipmentItems = ['ইকুইপমেন্ট', 'অপশন ১', 'অপশন ২'];
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Builddropdown(
-            image: 'assets/images/duck.png',
-            value: selectedCategory,
-            items: categoryItems,
-            onChanged: (value) {},
-          ),
-          Builddropdown(
-            image: 'assets/images/ticket.png',
-            value: selectedPrice,
-            items: priceItems,
-            onChanged: (value) {},
-          ),
-          Builddropdown(
-            image: 'assets/images/equip.png',
-            value: selectedEquipment,
-            items: equipmentItems,
-            onChanged: (value) {},
-          ),
-        ],
+    final controller = Get.find<HomepageController>();
+    return Container(
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            InkWell(
+              onTap: () {
+                controller.isCategoryTapped.value =
+                    !controller.isCategoryTapped.value;
+              },
+              child: Builddropdown(
+                image: 'assets/images/duck.png',
+                value: 'ক্যাটাগিরি',
+              ),
+            ),
+            Builddropdown(
+              image: 'assets/images/ticket.png',
+              value: 'মূল্য:হোলসেলার',
+            ),
+            Builddropdown(
+              image: 'assets/images/equip.png',
+              value: 'ইকুইপমেন্ট',
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -4,14 +4,10 @@ import 'package:flutter/material.dart';
 class Builddropdown extends StatefulWidget {
   String image;
   String value;
-  List<String> items;
-  ValueChanged<String?> onChanged;
 
   Builddropdown({
     required this.image,
     required this.value,
-    required this.items,
-    required this.onChanged,
   });
 
   @override
@@ -25,19 +21,8 @@ class _BuilddropdownState extends State<Builddropdown> {
       children: [
         Image(image: AssetImage(widget.image)), // Customize the color
         SizedBox(width: 4),
-        DropdownButton<String>(
-          value: widget.value,
-          style: TextStyle(fontSize: 14, color: greyText),
-          underline: SizedBox(),
-          icon: Icon(Icons.check, color: Colors.green),
-          items: widget.items.map((item) {
-            return DropdownMenuItem<String>(
-              value: item,
-              child: Text(item),
-            );
-          }).toList(),
-          onChanged: widget.onChanged,
-        ),
+        Text(widget.value),
+        Icon(Icons.check, color: primaryColor),
       ],
     );
   }

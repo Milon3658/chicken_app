@@ -11,40 +11,60 @@ class HomepageView extends GetView<HomepageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color(0xffEEEEEE),
         body: SingleChildScrollView(
-      child: SafeArea(
-        child: Column(
-          children: [
-            Homeappbar(),
-            Gap(10),
-            Options(),
-            Gap(10),
-            Image.asset(
-              'assets/images/chicken.png',
-              height: 240,
-              width: Get.width,
-              fit: BoxFit.cover,
+          child: SafeArea(
+            child: Obx(
+              () => Column(
+                children: [
+                  Homeappbar(),
+                  Options(),
+                  Gap(10),
+                  Row(
+                    children: [
+                      controller.isCategoryTapped.value
+                          ? Padding(
+                              padding: const EdgeInsets.only(right: 5, top: 5),
+                              child: Container(
+                                width: 80,
+                                height: Get.height,
+                                color: Colors.red,
+                              ),
+                            )
+                          : Container(),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/chicken.png',
+                              height: 240,
+                              width: Get.width,
+                              fit: BoxFit.cover,
+                            ),
+                            Gap(5),
+                            GridView.builder(
+                                itemCount: 10,
+                                shrinkWrap: true,
+                                physics: NeverScrollableScrollPhysics(),
+                                primary: false,
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                        crossAxisCount: 2,
+                                        childAspectRatio: 0.7,
+                                        crossAxisSpacing: 5,
+                                        mainAxisSpacing: 5),
+                                itemBuilder: (BuildContext context, int index) {
+                                  return ProductCard();
+                                }),
+                          ],
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
-            Gap(10),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: GridView.builder(
-                  itemCount: 10,
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  primary: false,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.7,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10),
-                  itemBuilder: (BuildContext context, int index) {
-                    return ProductCard();
-                  }),
-            ),
-          ],
-        ),
-      ),
-    ));
+          ),
+        ));
   }
 }
