@@ -20,9 +20,7 @@ class _AjkerbazarState extends State<Ajkerbazar> {
       DataTab(title: "বাচ্চার দাম"),
       DataTab(title: "রেডি মুরগির দাম"),
     ];
-
     List<String> chicken_quality = ['A +', 'A -', 'B +', 'C +', 'D +'];
-
     return SingleChildScrollView(
       child: Obx(
         () => Padding(
