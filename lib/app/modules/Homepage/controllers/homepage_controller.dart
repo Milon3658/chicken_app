@@ -6,6 +6,7 @@ class HomepageController extends GetxController {
   final count = 0.obs;
   RxBool isCategoryTapped = false.obs;
   RxInt tabTextIconIndexSelected = 0.obs;
+  RxBool showChickenPrice = false.obs;
   @override
   void onInit() {
     super.onInit();

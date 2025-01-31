@@ -20,6 +20,9 @@ class _AjkerbazarState extends State<Ajkerbazar> {
       DataTab(title: "বাচ্চার দাম"),
       DataTab(title: "রেডি মুরগির দাম"),
     ];
+
+    List<String> chicken_quality = ['A +', 'A -', 'B +', 'C +', 'D +'];
+
     return SingleChildScrollView(
       child: Obx(
         () => Padding(
@@ -32,6 +35,7 @@ class _AjkerbazarState extends State<Ajkerbazar> {
                 children: [
                   InkWell(
                       onTap: () {
+                        controller.showChickenPrice.value = false;
                         Get.back();
                       },
                       child: Icon(Icons.close))
@@ -55,47 +59,164 @@ class _AjkerbazarState extends State<Ajkerbazar> {
                 selectedIndex: controller.tabTextIconIndexSelected.value,
                 selectedLabelIndex: (index) {
                   controller.tabTextIconIndexSelected.value = index;
+                  controller.showChickenPrice.value = false;
                 },
               ),
               Gap(20),
-              Container(
-                  height: 60,
-                  width: Get.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 1,
-                        blurRadius: 7,
-                        offset: Offset(0, 3),
+              Obx(() => controller.tabTextIconIndexSelected.value == 0
+                  ? InkWell(
+                      onTap: () {
+                        controller.showChickenPrice.value = true;
+                      },
+                      child: controller.showChickenPrice.value == true
+                          ? Column(
+                              children: [
+                                Text(
+                                  'কাজী ফার্ম বাচ্চার দাম \n 10.02.2025',
+                                  textAlign: TextAlign.center,
+                                ),
+                                Gap(10),
+                                Container(
+                                  height: 60,
+                                  width: Get.width,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0.5),
+                                        spreadRadius: 1,
+                                        blurRadius: 7,
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'ব্রয়লার',
+                                      style: TextStyle(
+                                          color: greyText.withOpacity(0.58),
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Gap(10),
+                                GridView.builder(
+                                    itemCount: chicken_quality.length,
+                                    shrinkWrap: true,
+                                    primary: false,
+                                    gridDelegate:
+                                        SliverGridDelegateWithFixedCrossAxisCount(
+                                            crossAxisCount: 3,
+                                            childAspectRatio: 1.5,
+                                            crossAxisSpacing: 10,
+                                            mainAxisSpacing: 10),
+                                    itemBuilder:
+                                        (BuildContext context, int index) {
+                                      return Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color:
+                                                  Colors.grey.withOpacity(0.5),
+                                              spreadRadius: 1,
+                                              blurRadius: 7,
+                                              offset: Offset(0, 3),
+                                            ),
+                                          ],
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            chicken_quality[index],
+                                            style: TextStyle(
+                                                color:
+                                                    greyText.withOpacity(0.58),
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                      );
+                                    })
+                              ],
+                            )
+                          : Container(
+                              height: 60,
+                              width: Get.width,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 1,
+                                    blurRadius: 7,
+                                    offset: Offset(0, 3),
+                                  ),
+                                ],
+                              ),
+                              child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 15),
+                                  child: Center(
+                                    child: ListTile(
+                                      leading: CircleAvatar(
+                                        radius: 16,
+                                        backgroundColor: primaryColor,
+                                        child: CircleAvatar(
+                                          radius: 15,
+                                          backgroundColor: Colors.white,
+                                          child: Icon(
+                                            Icons.image,
+                                            color: secondaryColor,
+                                          ),
+                                        ),
+                                      ),
+                                      title: Text('কাজী ফার্ম:'),
+                                      trailing: Text(
+                                        'ভিউ',
+                                        style: TextStyle(color: primaryColor),
+                                      ),
+                                    ),
+                                  ))),
+                    )
+                  : Container(
+                      height: 60,
+                      width: Get.width,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Center(
-                        child: ListTile(
-                          leading: CircleAvatar(
-                            radius: 16,
-                            backgroundColor: primaryColor,
-                            child: CircleAvatar(
-                              radius: 15,
-                              backgroundColor: Colors.white,
-                              child: Icon(
-                                Icons.image,
-                                color: secondaryColor,
+                      child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Center(
+                            child: ListTile(
+                              leading: Image(
+                                image: AssetImage(
+                                    'assets/images/round_chicken.png'),
+                                height: 40,
+                                width: 45,
+                                fit: BoxFit.cover,
+                              ),
+                              title: Text('ব্রয়লার'),
+                              trailing: Text(
+                                '১৬০ টাকা',
+                                style: TextStyle(
+                                    color: greyText.withOpacity(0.58)),
                               ),
                             ),
-                          ),
-                          title: Text('কাজী ফার্ম:'),
-                          trailing: Text(
-                            'ভিউ',
-                            style: TextStyle(color: primaryColor),
-                          ),
-                        ),
-                      )))
+                          )))),
             ],
           ),
         ),
