@@ -109,7 +109,7 @@ class _AjkerbazarState extends State<Ajkerbazar> {
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
                                             crossAxisCount: 3,
-                                            childAspectRatio: 1.5,
+                                            childAspectRatio: 1.8,
                                             crossAxisSpacing: 10,
                                             mainAxisSpacing: 10),
                                     itemBuilder:
@@ -183,40 +183,50 @@ class _AjkerbazarState extends State<Ajkerbazar> {
                                     ),
                                   ))),
                     )
-                  : Container(
-                      height: 60,
-                      width: Get.width,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: Center(
-                            child: ListTile(
-                              leading: Image(
-                                image: AssetImage(
-                                    'assets/images/round_chicken.png'),
-                                height: 40,
-                                width: 45,
-                                fit: BoxFit.cover,
-                              ),
-                              title: Text('ব্রয়লার'),
-                              trailing: Text(
-                                '১৬০ টাকা',
-                                style: TextStyle(
-                                    color: greyText.withOpacity(0.58)),
-                              ),
+                  : Column(
+                      children: [
+                        Text(
+                          'ঢাকায় আমদানি কৃত রেডি মুরগির দাম \n 10.02.2025',
+                          textAlign: TextAlign.center,
+                        ),
+                        Gap(10),
+                        Container(
+                            height: 60,
+                            width: Get.width,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 1,
+                                  blurRadius: 7,
+                                  offset: Offset(0, 3),
+                                ),
+                              ],
                             ),
-                          )))),
+                            child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Center(
+                                  child: ListTile(
+                                    leading: Image(
+                                      image: AssetImage(
+                                          'assets/images/round_chicken.png'),
+                                      height: 40,
+                                      width: 45,
+                                      fit: BoxFit.cover,
+                                    ),
+                                    title: Text('ব্রয়লার'),
+                                    trailing: Text(
+                                      '১৬০ টাকা',
+                                      style: TextStyle(
+                                          color: greyText.withOpacity(0.58)),
+                                    ),
+                                  ),
+                                ))),
+                      ],
+                    )),
             ],
           ),
         ),
