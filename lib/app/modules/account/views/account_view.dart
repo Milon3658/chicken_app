@@ -70,6 +70,21 @@ class AccountView extends GetView<AccountController> {
               ),
               InkWell(
                 onTap: () {
+                  Get.toNamed(Routes.MY_DEAL);
+                },
+                child: Profiletile(
+                    title: 'আমার ডিল',
+                    image: 'assets/images/two_hand_color.png'),
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.MY_BID);
+                },
+                child: Profiletile(
+                    title: 'আমার বিড', image: 'assets/images/bid.png'),
+              ),
+              InkWell(
+                onTap: () {
                   Get.toNamed(Routes.MEMBERSHIP);
                 },
                 child: Profiletile(

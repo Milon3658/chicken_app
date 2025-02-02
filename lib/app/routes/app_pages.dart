@@ -14,6 +14,10 @@ import '../modules/Homepage/bindings/homepage_binding.dart';
 import '../modules/Homepage/views/homepage_view.dart';
 import '../modules/Inbox/bindings/inbox_binding.dart';
 import '../modules/Inbox/views/inbox_view.dart';
+import '../modules/MyBid/bindings/my_bid_binding.dart';
+import '../modules/MyBid/views/my_bid_view.dart';
+import '../modules/MyDeal/bindings/my_deal_binding.dart';
+import '../modules/MyDeal/views/my_deal_view.dart';
 import '../modules/MyTotalAdds/bindings/my_total_adds_binding.dart';
 import '../modules/MyTotalAdds/views/my_total_adds_view.dart';
 import '../modules/Product_Details/bindings/product_details_binding.dart';
@@ -162,6 +166,16 @@ class AppPages {
       name: _Paths.INBOX,
       page: () => const InboxView(),
       binding: InboxBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_DEAL,
+      page: () => const MyDealView(),
+      binding: MyDealBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_BID,
+      page: () => const MyBidView(),
+      binding: MyBidBinding(),
     ),
   ];
 }

@@ -27,6 +27,8 @@ abstract class Routes {
   static const DEAL = _Paths.DEAL;
   static const CHAT = _Paths.CHAT;
   static const INBOX = _Paths.INBOX;
+  static const MY_DEAL = _Paths.MY_DEAL;
+  static const MY_BID = _Paths.MY_BID;
 }
 
 abstract class _Paths {
@@ -55,4 +57,6 @@ abstract class _Paths {
   static const DEAL = '/deal';
   static const CHAT = '/chat';
   static const INBOX = '/inbox';
+  static const MY_DEAL = '/my-deal';
+  static const MY_BID = '/my-bid';
 }
