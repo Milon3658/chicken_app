@@ -12,6 +12,8 @@ import '../modules/EditAdds/bindings/edit_adds_binding.dart';
 import '../modules/EditAdds/views/edit_adds_view.dart';
 import '../modules/Homepage/bindings/homepage_binding.dart';
 import '../modules/Homepage/views/homepage_view.dart';
+import '../modules/Inbox/bindings/inbox_binding.dart';
+import '../modules/Inbox/views/inbox_view.dart';
 import '../modules/MyTotalAdds/bindings/my_total_adds_binding.dart';
 import '../modules/MyTotalAdds/views/my_total_adds_view.dart';
 import '../modules/Product_Details/bindings/product_details_binding.dart';
@@ -155,6 +157,11 @@ class AppPages {
       name: _Paths.CHAT,
       page: () => const ChatView(),
       binding: ChatBinding(),
+    ),
+    GetPage(
+      name: _Paths.INBOX,
+      page: () => const InboxView(),
+      binding: InboxBinding(),
     ),
   ];
 }

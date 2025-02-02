@@ -85,10 +85,8 @@ class ChatView extends GetView<ChatController> {
               alignment: Alignment.centerLeft,
               child: Text(
                 'ডিলার',
-                style: TextStyle(
-                    color: greyText.withOpacity(0.58),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(color: greyText.withOpacity(0.58), fontSize: 16),
               ),
             ),
           ],

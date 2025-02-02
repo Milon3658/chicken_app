@@ -26,6 +26,7 @@ abstract class Routes {
   static const AJKER_BAJAR = _Paths.AJKER_BAJAR;
   static const DEAL = _Paths.DEAL;
   static const CHAT = _Paths.CHAT;
+  static const INBOX = _Paths.INBOX;
 }
 
 abstract class _Paths {
@@ -53,4 +54,5 @@ abstract class _Paths {
   static const AJKER_BAJAR = '/ajker-bajar';
   static const DEAL = '/deal';
   static const CHAT = '/chat';
+  static const INBOX = '/inbox';
 }
