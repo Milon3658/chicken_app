@@ -30,7 +30,7 @@ class _LeftnavigationState extends State<Leftnavigation> {
       'দেশি'
     ];
     return Container(
-      width: 80,
+      width: 100,
       height: Get.height,
       color: Colors.white,
       child: ListView.builder(

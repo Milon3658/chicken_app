@@ -13,55 +13,59 @@ class HomepageView extends GetView<HomepageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffEEEEEE),
+        backgroundColor: Color(0xff003CD8),
         body: SingleChildScrollView(
           child: SafeArea(
-            child: Obx(
-              () => Column(
-                children: [
-                  Homeappbar(),
-                  Options(),
-                  Gap(5),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      controller.isCategoryTapped.value
-                          ? Padding(
-                              padding: const EdgeInsets.only(
-                                right: 5,
+            child: Container(
+              color: Color(0xffEEEEEE),
+              child: Obx(
+                () => Column(
+                  children: [
+                    Homeappbar(),
+                    Options(),
+                    Gap(5),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        controller.isCategoryTapped.value
+                            ? Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 5,
+                                ),
+                                child: Leftnavigation())
+                            : Container(),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/chicken.png',
+                                height: 240,
+                                width: Get.width,
+                                fit: BoxFit.cover,
                               ),
-                              child: Leftnavigation())
-                          : Container(),
-                      Expanded(
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/chicken.png',
-                              height: 240,
-                              width: Get.width,
-                              fit: BoxFit.cover,
-                            ),
-                            Gap(5),
-                            GridView.builder(
-                                itemCount: 10,
-                                shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                primary: false,
-                                gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 2,
-                                        childAspectRatio: 0.7,
-                                        crossAxisSpacing: 5,
-                                        mainAxisSpacing: 5),
-                                itemBuilder: (BuildContext context, int index) {
-                                  return ProductCard();
-                                }),
-                          ],
-                        ),
-                      )
-                    ],
-                  )
-                ],
+                              Gap(5),
+                              GridView.builder(
+                                  itemCount: 10,
+                                  shrinkWrap: true,
+                                  physics: NeverScrollableScrollPhysics(),
+                                  primary: false,
+                                  gridDelegate:
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                          crossAxisCount: 2,
+                                          childAspectRatio: 0.7,
+                                          crossAxisSpacing: 5,
+                                          mainAxisSpacing: 5),
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
+                                    return ProductCard();
+                                  }),
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),

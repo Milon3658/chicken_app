@@ -4,6 +4,8 @@ import '../modules/Adds/bindings/adds_binding.dart';
 import '../modules/Adds/views/adds_view.dart';
 import '../modules/Buy/bindings/buy_binding.dart';
 import '../modules/Buy/views/buy_view.dart';
+import '../modules/Deal/bindings/deal_binding.dart';
+import '../modules/Deal/views/deal_view.dart';
 import '../modules/EditAdds/bindings/edit_adds_binding.dart';
 import '../modules/EditAdds/views/edit_adds_view.dart';
 import '../modules/Homepage/bindings/homepage_binding.dart';
@@ -141,6 +143,11 @@ class AppPages {
       name: _Paths.LOGIN_FORM,
       page: () => const LoginFormView(),
       binding: LoginFormBinding(),
+    ),
+    GetPage(
+      name: _Paths.DEAL,
+      page: () => const DealView(),
+      binding: DealBinding(),
     ),
   ];
 }

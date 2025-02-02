@@ -3,8 +3,11 @@ import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Future.delayed(Duration(milliseconds: 500), () {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {

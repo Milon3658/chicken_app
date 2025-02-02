@@ -1,6 +1,7 @@
 import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/Homepage/widgets/AjkerBazar.dart';
 import 'package:chicken/app/modules/Homepage/widgets/HoleSellButton.dart';
+import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
@@ -128,11 +129,16 @@ class Homeappbar extends StatelessWidget {
             ),
             Row(
               children: [
-                Image(
-                  image: AssetImage('assets/images/hand.png'),
-                  height: 30,
-                  width: 30,
-                  fit: BoxFit.cover,
+                InkWell(
+                  onTap: () {
+                    Get.toNamed(Routes.DEAL);
+                  },
+                  child: Image(
+                    image: AssetImage('assets/images/hand.png'),
+                    height: 30,
+                    width: 30,
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 Gap(8),
                 Image(

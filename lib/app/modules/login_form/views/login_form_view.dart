@@ -16,11 +16,11 @@ class LoginFormView extends GetView<LoginFormController> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Gap(30),
+              Gap(40),
               Stack(
                 children: [
                   Container(
-                    height: Get.height - 70,
+                    height: Get.height,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Color(0xffE5DFCF),

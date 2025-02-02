@@ -24,6 +24,7 @@ abstract class Routes {
   static const OTP = _Paths.OTP;
   static const LOGIN_FORM = _Paths.LOGIN_FORM;
   static const AJKER_BAJAR = _Paths.AJKER_BAJAR;
+  static const DEAL = _Paths.DEAL;
 }
 
 abstract class _Paths {
@@ -49,4 +50,5 @@ abstract class _Paths {
   static const OTP = '/otp';
   static const LOGIN_FORM = '/login-form';
   static const AJKER_BAJAR = '/ajker-bajar';
+  static const DEAL = '/deal';
 }
