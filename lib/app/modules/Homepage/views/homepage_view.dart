@@ -1,4 +1,3 @@
-import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/Homepage/widgets/HomeAppBar.dart';
 import 'package:chicken/app/modules/Homepage/widgets/LeftNavigation.dart';
 import 'package:chicken/app/modules/Homepage/widgets/Options.dart';

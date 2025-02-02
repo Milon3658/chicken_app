@@ -17,7 +17,7 @@ class LoginView extends GetView<LoginController> {
           children: [
             Column(
               children: [
-                Gap(30),
+                Gap(40),
                 Container(
                   height: 350,
                   width: double.infinity,

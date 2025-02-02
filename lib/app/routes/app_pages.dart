@@ -4,6 +4,8 @@ import '../modules/Adds/bindings/adds_binding.dart';
 import '../modules/Adds/views/adds_view.dart';
 import '../modules/Buy/bindings/buy_binding.dart';
 import '../modules/Buy/views/buy_view.dart';
+import '../modules/Chat/bindings/chat_binding.dart';
+import '../modules/Chat/views/chat_view.dart';
 import '../modules/Deal/bindings/deal_binding.dart';
 import '../modules/Deal/views/deal_view.dart';
 import '../modules/EditAdds/bindings/edit_adds_binding.dart';
@@ -148,6 +150,11 @@ class AppPages {
       name: _Paths.DEAL,
       page: () => const DealView(),
       binding: DealBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHAT,
+      page: () => const ChatView(),
+      binding: ChatBinding(),
     ),
   ];
 }

@@ -19,6 +19,7 @@ class AccountView extends GetView<AccountController> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: Icon(Icons.arrow_back, color: primaryColor),
         title: Text(
           'অ্যাকাউন্ট',
           style: TextStyle(color: primaryColor, fontWeight: FontWeight.bold),
@@ -75,7 +76,12 @@ class AccountView extends GetView<AccountController> {
                     title: 'আমার মেম্বারশিপ',
                     image: 'assets/images/member.png'),
               ),
-              Profiletile(title: 'চ্যাট করুন', image: 'assets/images/chat.png'),
+              InkWell(
+                  onTap: () {
+                    Get.toNamed(Routes.CHAT);
+                  },
+                  child: Profiletile(
+                      title: 'চ্যাট করুন', image: 'assets/images/chat.png')),
               InkWell(
                 onTap: () {
                   Get.toNamed(Routes.MY_PROFILE);
