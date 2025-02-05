@@ -1,4 +1,7 @@
+import 'package:chicken/app/modules/MyBid/widgets/bid_value.dart';
+import 'package:chicken/app/modules/MyDeal/widgets/DealTopBar.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import 'package:get/get.dart';
 
@@ -9,14 +12,24 @@ class MyDealView extends GetView<MyDealController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('MyDealView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'MyDealView is working',
-          style: TextStyle(fontSize: 20),
+      body: SafeArea(
+        child: Column(
+          children: [
+            DealTopBar(controller: controller),
+            Gap(10),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [BidValue('Jan 13 8:33')],
+                    )
+                  ],
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );

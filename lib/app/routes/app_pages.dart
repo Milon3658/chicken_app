@@ -174,7 +174,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.MY_BID,
-      page: () => const MyBidView(),
+      page: () => MyBidView(),
       binding: MyBidBinding(),
     ),
   ];

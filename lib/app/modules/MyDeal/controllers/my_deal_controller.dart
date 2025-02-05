@@ -4,6 +4,8 @@ class MyDealController extends GetxController {
   //TODO: Implement MyDealController
 
   final count = 0.obs;
+
+  RxInt changeTab = 0.obs;
   @override
   void onInit() {
     super.onInit();

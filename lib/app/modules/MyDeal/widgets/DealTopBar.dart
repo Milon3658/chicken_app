@@ -1,14 +1,14 @@
 import 'package:chicken/app/data/AppColors.dart';
-import 'package:chicken/app/modules/MyBid/controllers/my_bid_controller.dart';
 import 'package:chicken/app/modules/MyBid/widgets/bid_value.dart';
+import 'package:chicken/app/modules/MyDeal/controllers/my_deal_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
-class TopBar extends StatelessWidget {
-  MyBidController controller;
+class DealTopBar extends StatelessWidget {
+  MyDealController controller;
 
-  TopBar({required this.controller});
+  DealTopBar({required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +42,10 @@ class TopBar extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        BidValue('টোটাল বিড: ১০'),
-                        BidValue('গ্রহণ হয়েছে: ৪'),
-                        BidValue('সাড়া নেই: ৬'),
+                        BidValue('আমার ডিল: ৪'),
+                        BidValue('ইউজার রিকোয়েস্ট:১০'),
+                        BidValue('একসেপ্ট: ৬'),
+                        BidValue('বাতিল: ৬'),
                       ],
                     ),
                   )

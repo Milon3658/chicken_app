@@ -9,7 +9,6 @@ import 'package:get/get.dart';
 import '../controllers/my_bid_controller.dart';
 
 class MyBidView extends GetView<MyBidController> {
-  const MyBidView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
