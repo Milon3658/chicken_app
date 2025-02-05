@@ -1,34 +1,72 @@
-import 'package:chicken/app/data/AppColors.dart';
+import 'package:chicken/app/modules/Homepage/controllers/homepage_controller.dart';
+import 'package:chicken/app/modules/Homepage/widgets/HomeAppBar.dart';
+import 'package:chicken/app/modules/Homepage/widgets/LeftNavigation.dart';
+import 'package:chicken/app/modules/Homepage/widgets/Options.dart';
+import 'package:chicken/app/modules/Homepage/widgets/ProductCard.dart';
 import 'package:chicken/app/modules/sellPage/controllers/sell_page_controller.dart';
-import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 class SellPageView extends GetView<SellPageController> {
   const SellPageView({super.key});
   @override
   Widget build(BuildContext context) {
+    final homeController = Get.find<HomepageController>();
     return Scaffold(
-      backgroundColor: Color(0xffE9E8E8),
-      appBar: AppBar(
-        leading: InkWell(
-          onTap: () {
-            Get.toNamed(Routes.MAINPAGE);
-          },
-          child: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+        body: SingleChildScrollView(
+      child: SafeArea(
+          child: Obx(
+        () => Column(
+          children: [
+            Homeappbar(),
+            Gap(10),
+            Options(),
+            Gap(10),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                homeController.isCategoryTapped.value
+                    ? SingleChildScrollView(
+                        child: Padding(
+                            padding: const EdgeInsets.only(
+                              right: 5,
+                            ),
+                            child: Leftnavigation()),
+                      )
+                    : Container(),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/chicken.png',
+                        height: 240,
+                        width: Get.width,
+                        fit: BoxFit.cover,
+                      ),
+                      Gap(5),
+                      GridView.builder(
+                          itemCount: 10,
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          primary: false,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  childAspectRatio: 0.7,
+                                  crossAxisSpacing: 5,
+                                  mainAxisSpacing: 5),
+                          itemBuilder: (BuildContext context, int index) {
+                            return ProductCard();
+                          }),
+                    ],
+                  ),
+                )
+              ],
+            )
+          ],
         ),
-        backgroundColor: primaryColor,
-        title: const Text(
-          '',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      body: Center(
-        child: Text('sell'),
-      ),
-    );
+      )),
+    ));
   }
 }

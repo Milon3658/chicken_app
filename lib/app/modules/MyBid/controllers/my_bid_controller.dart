@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 class MyBidController extends GetxController {
   //TODO: Implement MyBidController
 
-  final count = 0.obs;
+  RxInt changeTab = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +19,4 @@ class MyBidController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
