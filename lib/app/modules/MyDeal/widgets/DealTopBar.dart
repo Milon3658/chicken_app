@@ -42,10 +42,26 @@ class DealTopBar extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        BidValue('আমার ডিল: ৪'),
-                        BidValue('ইউজার রিকোয়েস্ট:১০'),
-                        BidValue('একসেপ্ট: ৬'),
-                        BidValue('বাতিল: ৬'),
+                        InkWell(
+                            onTap: () {
+                              controller.selectOption.value = 0;
+                            },
+                            child: BidValue('আমার ডিল: ৪')),
+                        InkWell(
+                            onTap: () {
+                              controller.selectOption.value = 1;
+                            },
+                            child: BidValue('ইউজার রিকোয়েস্ট:১০')),
+                        InkWell(
+                            onTap: () {
+                              controller.selectOption.value = 2;
+                            },
+                            child: BidValue('একসেপ্ট: ৬')),
+                        InkWell(
+                            onTap: () {
+                              controller.selectOption.value = 3;
+                            },
+                            child: BidValue('বাতিল: ৬')),
                       ],
                     ),
                   )
@@ -85,7 +101,7 @@ class DealTopBar extends StatelessWidget {
                           controller.changeTab.value = 0;
                         },
                         child: Text(
-                          'আমার বিড',
+                          'আমার ডিল',
                           style: TextStyle(color: Colors.white),
                         )),
                   ),
@@ -102,7 +118,7 @@ class DealTopBar extends StatelessWidget {
                       onPressed: () {
                         controller.changeTab.value = 1;
                       },
-                      child: Text('বিড লিডারবোর্ড',
+                      child: Text('কমপ্লিট ডিল',
                           style: TextStyle(color: Colors.white)),
                     ),
                   ),

@@ -1,0 +1,129 @@
+import 'package:chicken/app/data/AppColors.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+
+class UserRequest extends StatelessWidget {
+  const UserRequest({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          width: Get.width,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image(
+                    image: AssetImage('assets/images/black_chicken.png'),
+                    height: 100,
+                    width: 140,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Jan 13 8:33',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'দাম:১৬০ টাকা',
+                    style: TextStyle(
+                      color: secondaryColor,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'ব্রয়লার:২৫০ পিস',
+                    style: TextStyle(
+                      color: greyText.withOpacity(0.58),
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'গড় ওজন: ২.৫ কেজি',
+                    style: TextStyle(
+                      color: greyText.withOpacity(0.58),
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'নাম:আসাদুল',
+                    style: TextStyle(
+                      color: greyText.withOpacity(0.58),
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'এলাকা:রাঙ্গাবাড়ী',
+                    style: TextStyle(
+                      color: greyText.withOpacity(0.58),
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Color(0xff63E308).withOpacity(0.8)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'একসেপ্ট',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Color(0xffFF7E06)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'বাতিল',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  // Gap(10),
+                  Text('২৪ দিন')
+                ],
+              )
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}

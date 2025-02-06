@@ -6,6 +6,7 @@ class MyDealController extends GetxController {
   final count = 0.obs;
 
   RxInt changeTab = 0.obs;
+  RxInt selectOption = 0.obs;
   @override
   void onInit() {
     super.onInit();
