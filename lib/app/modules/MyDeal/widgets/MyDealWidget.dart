@@ -1,4 +1,5 @@
 import 'package:chicken/app/data/AppColors.dart';
+import 'package:chicken/app/modules/MyDeal/widgets/EditDeal.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
@@ -32,20 +33,25 @@ class Mydealwidget extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              width: 180,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5),
-                  child: Text(
-                    'এডিট ডিল',
-                    style: TextStyle(
-                      color: greyText.withOpacity(0.8),
-                      fontWeight: FontWeight.bold,
+            InkWell(
+              onTap: () {
+                Get.to(EditDeal());
+              },
+              child: Container(
+                width: 180,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: Text(
+                      'এডিট ডিল',
+                      style: TextStyle(
+                        color: greyText.withOpacity(0.8),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
