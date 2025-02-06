@@ -1,4 +1,5 @@
 import 'package:chicken/app/data/AppColors.dart';
+import 'package:chicken/app/modules/MyDeal/widgets/View_Deal.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
@@ -97,7 +98,9 @@ class CompleteDeal extends StatelessWidget {
                           ),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(ViewDeal());
+                      },
                       child: Text(
                         'ভিউ',
                         style: TextStyle(color: Colors.white),
