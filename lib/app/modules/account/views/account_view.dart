@@ -127,14 +127,34 @@ class AccountView extends GetView<AccountController> {
                 ],
               ),
               Gap(10),
-              Profiletile(
-                  title: 'আমাদের সম্পর্কে', image: 'assets/images/group.png'),
-              Profiletile(
-                  title: 'নীতিমালা ও শর্তমালা',
-                  image: 'assets/images/info.png'),
-              Profiletile(
-                  title: 'গোপনীয়তা নীতি', image: 'assets/images/info.png'),
-              Profiletile(title: 'যোগাযোগ', image: 'assets/images/group.png'),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.ABOUT_US);
+                },
+                child: Profiletile(
+                    title: 'আমাদের সম্পর্কে', image: 'assets/images/group.png'),
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.TERMS_CONDITION);
+                },
+                child: Profiletile(
+                    title: 'নীতিমালা ও শর্তমালা',
+                    image: 'assets/images/info.png'),
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.PRIVECY_POLICY);
+                },
+                child: Profiletile(
+                    title: 'গোপনীয়তা নীতি', image: 'assets/images/info.png'),
+              ),
+              InkWell(
+                  onTap: () {
+                    Get.toNamed(Routes.CONNECT_US);
+                  },
+                  child: Profiletile(
+                      title: 'যোগাযোগ', image: 'assets/images/group.png')),
               Profiletile(
                   title: 'প্রস্থান করুন', image: 'assets/images/back.png'),
             ],

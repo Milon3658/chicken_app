@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/AboutUs/bindings/about_us_binding.dart';
+import '../modules/AboutUs/views/about_us_view.dart';
 import '../modules/Adds/bindings/adds_binding.dart';
 import '../modules/Adds/views/adds_view.dart';
 import '../modules/Buy/bindings/buy_binding.dart';
@@ -26,6 +28,8 @@ import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/account_view.dart';
 import '../modules/chicken_monitor/bindings/chicken_monitor_binding.dart';
 import '../modules/chicken_monitor/views/chicken_monitor_view.dart';
+import '../modules/connect_us/bindings/connect_us_binding.dart';
+import '../modules/connect_us/views/connect_us_view.dart';
 import '../modules/create_input/bindings/create_input_binding.dart';
 import '../modules/create_input/views/create_input_view.dart';
 import '../modules/delete_adds/bindings/delete_adds_binding.dart';
@@ -46,8 +50,12 @@ import '../modules/otp/bindings/otp_binding.dart';
 import '../modules/otp/views/otp_view.dart';
 import '../modules/payment/bindings/payment_binding.dart';
 import '../modules/payment/views/payment_view.dart';
+import '../modules/privecy_policy/bindings/privecy_policy_binding.dart';
+import '../modules/privecy_policy/views/privecy_policy_view.dart';
 import '../modules/sellPage/bindings/sell_page_binding.dart';
 import '../modules/sellPage/views/sell_page_view.dart';
+import '../modules/terms_condition/bindings/terms_condition_binding.dart';
+import '../modules/terms_condition/views/terms_condition_view.dart';
 
 part 'app_routes.dart';
 
@@ -176,6 +184,26 @@ class AppPages {
       name: _Paths.MY_BID,
       page: () => MyBidView(),
       binding: MyBidBinding(),
+    ),
+    GetPage(
+      name: _Paths.ABOUT_US,
+      page: () => const AboutUsView(),
+      binding: AboutUsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRIVECY_POLICY,
+      page: () => const PrivecyPolicyView(),
+      binding: PrivecyPolicyBinding(),
+    ),
+    GetPage(
+      name: _Paths.TERMS_CONDITION,
+      page: () => const TermsConditionView(),
+      binding: TermsConditionBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONNECT_US,
+      page: () => const ConnectUsView(),
+      binding: ConnectUsBinding(),
     ),
   ];
 }

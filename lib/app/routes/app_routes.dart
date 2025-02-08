@@ -29,6 +29,10 @@ abstract class Routes {
   static const INBOX = _Paths.INBOX;
   static const MY_DEAL = _Paths.MY_DEAL;
   static const MY_BID = _Paths.MY_BID;
+  static const ABOUT_US = _Paths.ABOUT_US;
+  static const PRIVECY_POLICY = _Paths.PRIVECY_POLICY;
+  static const TERMS_CONDITION = _Paths.TERMS_CONDITION;
+  static const CONNECT_US = _Paths.CONNECT_US;
 }
 
 abstract class _Paths {
@@ -59,4 +63,8 @@ abstract class _Paths {
   static const INBOX = '/inbox';
   static const MY_DEAL = '/my-deal';
   static const MY_BID = '/my-bid';
+  static const ABOUT_US = '/about-us';
+  static const PRIVECY_POLICY = '/privecy-policy';
+  static const TERMS_CONDITION = '/terms-condition';
+  static const CONNECT_US = '/connect-us';
 }
