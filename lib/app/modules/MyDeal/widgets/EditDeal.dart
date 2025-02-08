@@ -1,5 +1,6 @@
 import 'package:chicken/app/data/AppColors.dart';
 import 'package:chicken/app/modules/Adds/widgets/UploadFormField.dart';
+import 'package:chicken/app/modules/MyDeal/widgets/View_Deal.dart';
 import 'package:chicken/app/modules/MyDeal/widgets/chicken_card.dart';
 import 'package:chicken/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
@@ -102,7 +103,9 @@ class EditDeal extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(ViewDeal());
+                      },
                       child: Text(
                         'প্রস্তাব সম্পূর্ণ করুন',
                         style: TextStyle(color: Colors.white),
